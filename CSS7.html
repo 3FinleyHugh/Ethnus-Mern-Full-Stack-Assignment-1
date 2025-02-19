@@ -3,88 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VIPUL KUMAR TASK 6</title>
-</head>
-<style>
-    body{
-        justify-items: center;
-    }
-    .contaner{
-        display: flex;
-        flex-direction: column;
-        background-color: antiquewhite;
-        padding: 20px 100px;
-    }
-    .contaner img{
-        border: 2px solid gray;
-        height: 200px;
-        width: 200px;
-        border-radius: 50%;
-    }
-    .contaner label{
-        font-weight: bold;
-        font-size: large;
-        padding: 10px 2px;
-    }
-    .contaner input{
-        padding: 8px 10px;
-        border-radius: 5px;
-        border: 2px solid grey;
-    }
-    .ln{
-        margin-top: 15px;
-        background-color: green;
-        color: white;
-        transition: background-color, 450ms;
-    }
-    .ln:hover{
-        background-color: blue ;
-    }
-    .check{
-        text-align: right;
-    }
-    .down{
-        margin-top: 5px;
-        display: flex;
-        
-    }
-    .down button{
-        background-color: red;
-        color: white;
-        height: 40px;
-        width: 80px;
-        border-radius: 8px;
-        border: 2px solid orangered;
-        font-size: medium;
-        transition: background-color, 8ms;
-    }
-    .down button:hover{
-        background-color: orange;
-        border: 3px solid white;
-    }
-    .down p{
-        padding-left: 84px;
-        
-    }
-</style>
-<body>
-    <h1>Task 6</h1>
-    <h2>Create login form</h2>
-    <div class="contaner">
-        <img src="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_640.png" alt="">
+    <title>Registration Form</title>
+    <style>
+        body {
+            background-color: #922D50;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
 
-        <label for="">Username</label>
-        <input type="text" placeholder="Enter Username">
-        <label for="">Password</label>
-        <input type="password" name="" id="" placeholder="Enter Password">
-        <input type="submit" value=" Login" class="ln">
-        <p>
-            <input type="checkbox" name="" id="" class="check">Remember me
-        </p>
-    </div>
-    <div class="down">
-        <button type="submit">Cancel</button>
-        <p><a href="">Forget password?</a></p>
+        .container {
+            background-color: #6B1D3B;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+            width: 30%;
+        }
+
+        form {
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+
+        label {
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            display: inline-block;
+            margin-right: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            width: 120px;
+        }
+
+        .input-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        input[type="radio"] {
+            width: auto;
+            margin: 0 5px;
+        }
+
+        .radio-group {
+            display: flex;
+            align-items: center;
+        }
+
+        .radio-group label {
+            margin-right: 10px;
+            font-weight: normal;
+        }
+
+        textarea {
+            height: 50px;
+            resize: none;
+        }
+
+        .register-btn {
+            width: 100%;
+            padding: 10px;
+            margin-top: 15px;
+            background-color: white;
+            color: black;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+        }
+
+        .register-btn:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form>
+            <div class="input-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="your name" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="your email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+            </div>
+            <div class="input-group">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" required>
+            </div>
+            <label>Gender:</label>
+            <div class="radio-group">
+                <input type="radio" id="male" name="gender">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender">
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="gender">
+                <label for="other">Other</label>
+            </div>
+            <div class="input-group">
+                <label for="language">Language:</label>
+                <select id="language">
+                    <option>Select language</option>
+                    <option>English</option>
+                    <option>Hindi</option>
+                    <option>Marathi</option>
+                    <option>bengali</option>
+                    <option>Bhojpuri</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="zipcode">Zip Code:</label>
+                <input type="text" id="zipcode">
+            </div>
+            <div class="input-group">
+                <label for="about">About:</label>
+                <textarea id="about" placeholder="Write about yourself..."></textarea>
+            </div>
+            <button type="submit" class="register-btn">Register</button>
+        </form>
     </div>
 </body>
 </html>
